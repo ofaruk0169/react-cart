@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
+import './MoodToggler.css';
 
 function MoodToggler() {
     const [count, setCount] = useState(0);
     let [isHappy, setIsHappy] = useState(true);
-    const toggleIsHappy = () => setIsHappy(isHappy = false);
+    const toggleIsHappy = () => setIsHappy(!isHappy);
+    const styles = {color: isHappy ? 'green' : 'red'};
     return (
         
-            <h3 onClick={toggleIsHappy}>{isHappy ? ":)" : ":("}</h3>
+            <h3 
+                className="MoodToggler"
+                style={styles} 
+                onClick={toggleIsHappy}>{isHappy ? ":)" : ":("}
+            
+            </h3>
         
     )
 }

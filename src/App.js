@@ -1,20 +1,27 @@
-import React from 'react';
-import Greeter from './Greeter';
-import './App.css';
-import Navbar from './Navbar';
-import Counter from './Counter';
-import MoodToggler from './MoodToggler';
+import React from "react";
+import Navbar from "./Navbar";
+import Greeter from "./Greeter";
+import Counter from "./Counter";
+import MoodToggler from "./MoodToggler";
+import Cart from "./Cart";
+import "./styles.css";
+
+const items = [
+  { id: 1, name: "Taco Seasoning", price: 2.25, qty: 2 },
+  { id: 2, name: "Pinto Beans", price: 1.99, qty: 3 },
+  { id: 3, name: "Sour Cream", price: 3.5, qty: 1 }
+];
 
 function App() {
   return (
     <div>
-      <Counter step={5}/>
+      <Cart initialItems={items} />
+      <Counter step={5} />
       <Counter />
       <MoodToggler />
       <Navbar />
-      <Greeter name="Omey" age="54" excitement={5}/>
-      <Greeter name="Caren"excitement={2}/>
-      <h1>hello from app</h1>
+     
+      <h1>HELLO FROM APP!</h1>
     </div>
   );
 }
