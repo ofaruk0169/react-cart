@@ -6,7 +6,7 @@ function CartItem({ id, name, price, qty, updateQty }) {
   return (
     <div className="CartItem">
       <div>{name}</div>
-      <div>${price}</div>
+      <div>£{price}</div>
       <div>
         <button onClick={subtractOne} disabled={qty <= 1}>
           -
@@ -14,7 +14,7 @@ function CartItem({ id, name, price, qty, updateQty }) {
         {qty}
         <button onClick={addOne}>+</button>
       </div>
-      <div>Total: ${qty * price}</div>
+      <div>Total: £{qty * price}</div>
     </div>
   );
 }
